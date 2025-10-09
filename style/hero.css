@@ -7,11 +7,11 @@
   /* Full screen hero section */
   width: 100%;
   min-height: 100dvh;
-  background: #0033a0;
+  background: #aa19da;
   color: white;
-  font-family: Futura;
+  font-family: 'SourGummy', sans-serif; 
   font-weight: bold;
-  font-size: 30px;
+  font-size: 300px;
   text-align: center;
 }
 .hero a {
@@ -42,4 +42,9 @@
   .hero {
     font-size: 75px;
   }
+}
+
+@font-face {
+  font-family: 'SourGummy';
+  src: url('SourGummy.ttf') format('truetype');
 }
