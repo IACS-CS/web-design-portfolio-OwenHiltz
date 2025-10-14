@@ -35,3 +35,11 @@ main {
   font-size: 18px; /* choose a font size */
   margin: 0 auto; /* center the content */
 }
+
+/* This code was generated with help from Github Copilot
+in response to the prompt "how to change link tex color and underline color" - 10/14/25 */
+a {
+  color: #0033a0; /* Change this to your preferred link color */
+  text-decoration: underline;
+  text-decoration-color: #c6093b; /* Change this to your preferred underline color */
+}
