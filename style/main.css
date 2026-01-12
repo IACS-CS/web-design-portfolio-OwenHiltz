@@ -1,8 +1,9 @@
 /* There's some sample CSS here which you can use or nuke as you like */
 
-html {
-  /* Make #id links scroll smoothly */
-  scroll-behavior: smooth;
+/* add to style/main.css */
+html, body {
+  overflow: hidden;
+  height: 100%;
 }
 
 body {

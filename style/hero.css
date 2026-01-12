@@ -3,21 +3,46 @@
   margin-block-end: 0;
 }
 .hero {
+  /* This code was generated with help from GitHub Copilot: position link over start button - 1/12/26 */
+  position: relative;
   box-sizing: border-box;
   /* Full screen hero section */
   width: 100%;
   min-height: 100dvh;
-  background: #aa19da;
-  color: white;
+  background-image: url('../photo/carinterior.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: black;
   font-family: 'SourGummy', sans-serif; 
   font-weight: bold;
-  font-size: 300px;
+  font-size: 150px;
   text-align: center;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
 }
 .hero a {
-  color: white;
+  color: rgb(1, 1, 1);
   text-decoration: underline;
   text-decoration-color: #c6093b;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+
+}
+
+/* Position the "Learn More" link over the push-to-start area in the background image */
+.hero a.start {
+  position: absolute;
+  left: 52%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #000000;
+  font-weight: 700;
+  text-shadow: white 2px 2px 4px;
+}
+.hero a.start:hover {
+  background: rgb(255, 255, 255);
 }
 
 /* A little "activation" to demonstrate JS is working in the template */
