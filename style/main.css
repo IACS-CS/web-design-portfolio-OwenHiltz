@@ -2,26 +2,36 @@
 
 /* add to style/main.css */
 html, body {
-  overflow: hidden;
   height: 100%;
+  overflow: hidden; /* prevent page-level scrolling */
 }
 
 body {
   /* Change to something you like, but please do customize the font! */
-  font-family: "SourGummy", sans-serif;
+  font-family: "lato", sans-serif;
   line-height: 1.4;
   /* reset default margins */
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   /* Customize colors! */
-  background: #f0f0f0;
-  color: #333;
+  background-image: url('/photo/finalinterior.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #ffffff;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 h2 {
-  color: #0033a0;
+  color: #ffffff;
   text-decoration: underline;
-  text-decoration-color: #c6093b;
+  text-decoration-color: purple;
   margin-bottom: 8px;
 }
 p {
@@ -29,18 +39,70 @@ p {
 }
 
 main {
-  /* Make sure our content can scroll the hero away */
-  min-height: 100dvh;
+  /* Container for the carousel slides. Keep page height stable. */
+  position: relative;
+  height: 100vh; /* full viewport so slides stay in place */
   max-width: 35em; /* choose a width for text */
   line-height: 1.8; /* choose a line spacing */
   font-size: 18px; /* choose a font size */
   margin: 0 auto; /* center the content */
+  padding-bottom: 4rem; /* space for controls */
+  overflow: hidden; /* keep slide scrollbars inside slide */
 }
 
 /* This code was generated with help from Github Copilot
 in response to the prompt "how to change link tex color and underline color" - 10/14/25 */
 a {
-  color: #0033a0; /* Change this to your preferred link color */
+  color: #ffffff; /* Change this to your preferred link color */
   text-decoration: underline;
-  text-decoration-color: #c6093b; /* Change this to your preferred underline color */
+  text-decoration-color: purple; /* Change this to your preferred underline color */
+}
+
+/* This CSS was generated with help from GitHub Copilot
+  in response to the prompt: "only display one text box at once and have the rest be able to scroll through with a click of the button" - 1/13/26 */
+/* Carousel: show only one "text box" (section) at a time */
+
+/* Stack slides absolutely so showing/hiding doesn't change page height */
+main > section {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0.4rem;
+  bottom: 3.5rem; /* leave room for controls */
+  padding: 1.25rem;
+  border-radius: 8px;
+}
+
+main > section.active {
+  display: block;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.5rem;
+}
+
+.carousel-controls button {
+  background: #c6093b;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.carousel-controls button:active { transform: scale(0.98); }
+
+div.screen {
+      height: 45vh;
+    overflow: auto;
+    margin-top: 8vh;
 }
